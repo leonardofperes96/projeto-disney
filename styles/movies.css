@@ -1,0 +1,73 @@
+.movies{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.movies h2{
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    font-weight: 700;
+}
+.movies div{ 
+    padding-right: 44px;
+    height: 640px;
+    overflow: auto; /* cria barra de scroll ao lado */
+}
+.movies ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+}
+.movies li{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: black;
+    position: relative;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    width: 265px;
+    height: 150px;
+    border-radius: 8px;
+    background-image: linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, #0E172F 100%), url('/icons/item-background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.movies div::-webkit-scrollbar{/*altura da barra de scroll*/
+width: 0.2rem;
+}
+.movies div::-webkit-scrollbar-track{/* preenchimento do "background" da barra de scroll*/
+    background: rgba(255, 255, 255, 0.4)
+}
+.movies div::-webkit-scrollbar-thumb{ /* barra de scroll propriamente dita*/
+    background: var(--primary);
+}
+.movies li span{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400px;
+    margin-bottom: 6px;
+}
+.movies li strong{
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+.movies li button{
+    position: absolute;
+    inset: 0; /* gera zero para todos eixos porque preciso? se não o auto não funciona, ele não ira saber até onde ele pode ir */
+    margin: auto;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: all 0.5s; 
+}
+.movies li:hover button{
+    opacity: 1;
+    transform: translate3d(0, 0,0 )
+}

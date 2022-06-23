@@ -1,0 +1,26 @@
+header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 64px;
+}
+.button-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 10px;
+    background: transparent;
+    width: 46px;
+}
+.button-menu span {
+    width: 100%;
+    height: 3px;
+    display: block;
+    background: var(--primary);
+    border-radius: 6px 
+}
+
+.button-menu span:last-child{
+    width: 45%;
+}
